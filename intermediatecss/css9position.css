@@ -1,0 +1,8 @@
+.position {
+  width: 80px;
+  height: 80px;
+  background-color: lightgreen;
+  position: relative;
+  left: 50px;
+  top: 75px;
+}

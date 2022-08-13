@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: "Roboto", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  /* ngilangin garis bawah */
+}
+
+nav {
+  position: relative;
+  background: linear-gradient(130deg, #07def8, purple);
+
+  padding: 10px 40px 10px 70px;
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li.logo {
+  flex: 1;
+  /* cari fungsinya */
+  font-size: 30px;
+  font-weight: 700;
+}
+nav ul div.items {
+  padding: 0 25px;
+  display: inline-flex;
+}
+nav ul div.items a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0 12px;
+  transition: 0.4s;
+  color: #f2f2f2;
+}
+nav ul div.items a:hover {
+  color: cyan;
+  font-size: 22px;
+  font-weight: 800;
+}
+nav ul .search-icon {
+  height: 40px;
+  width: 240px;
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+nav ul .search-icon input {
+  height: 100%;
+  width: 200px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+}
+nav ul .search-icon .icon {
+  height: 100%;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+nav ul .search-icon .icon:hover {
+  background: #e6e6e6;
+}
+nav ul .search-icon .icon span {
+  color: #222222;
+  font-size: 18px;
+}
+@media screen and (max-width: 950px) {
+  nav {
+    padding: 10px 40px 10px 0;
+  }
+  nav ul li.logo {
+    display: none;
+  }
+}
+/* pelajari @media screen and */
+
+.sidebar {
+  position: fixed;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #042331;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  background: #063146;
+  user-select: none;
+  /* cari fungsinya */
+}
+.sidebar header #btn {
+  left: 400px;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+.sidebar ul li:hover a {
+  /* transformy: 50px; */
+  /* transform gagal, kemungkinan karena display ul a */
+  /* transform: scale(1.2);
+   */
+  padding-left: 50px;
+  font-size: 22px;
+  /* transition: 0.4s; */
+}
+.sidebar ul a i {
+  margin-right: 10px;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  /* absolute untuk hilang dibalik sidebar, tanya kenapa */
+  cursor: pointer;
+  background: #042331;
+  border-radius: 4px;
+  margin-top: 60px;
+}
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  z-index: 1111;
+  left: -240px;
+  top: 12px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 300px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 240px;
+}
+#check:checked ~ section {
+  margin-left: 300px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(65deg, #fbda61, purple);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  /* penting, tanpa height background ga muncul, tanya kenapa */
+  transition: all 0.5s ease;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  /* height: 450px; */
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+  /* transition untuk memberikan periode waktu dalam animasi transisi */
+  /* untuk seting kartu bentuk dan ukuran tengah putih */
+}
+.card:hover {
+  height: 450px;
+  /* menambah tinggi */
+  /* transform: scale(1.2); */
+  /* menyesuaikan skala perubahan */
+  /* hover untuk animasi kartu ketika dipoint mouse */
+}
+.imgBx {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: black;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  /* untuk menyembunyikan  karakter yang melebihin batas tampilan*/
+  transition: 0.4s;
+}
+
+.card:hover .imgBx {
+  width: 250px;
+  height: 250px;
+}
+
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.card .content .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.4s;
+  transform: translateY(150px);
+}
+.card:hover .content .details {
+  transform: translateY(0px);
+}
+.card .content .details h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.2em;
+}
+.card .content .details span {
+  font-size: 0.75em;
+  opacity: 0.5;
+}
+.card .content .details .data {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+.card .content .details .data h3 {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+.card .content .details .data h3 span {
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.card .content .details .actionBtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card .content .details .actionBtn button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+  background: #ff5f95;
+  color: #fff;
+  cursor: pointer;
+}
+.card .content .details .actionBtn button:nth-child(2) 
+ /* nth untul elemen anak ke dua */ {
+  border: 1px solid #999;
+  color: #999;
+  background: #fff;
+}

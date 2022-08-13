@@ -1,0 +1,74 @@
+.selector {
+  color: red;
+}
+.color {
+  color: blue;
+}
+#backgroundcolor {
+  background-color: yellow;
+}
+.border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+}
+.margin {
+  color: red;
+}
+.p {
+  margin-top: 42px;
+}
+.padding {
+  background-color: lightblue;
+  padding: 42px 24px;
+}
+
+.hnw {
+  width: 160px;
+  height: 160px;
+  background-color: red;
+}
+.bnr {
+  width: 160px;
+  height: 160px;
+  background-color: orange;
+  border-radius: 80px;
+}
+.position {
+  width: 80px;
+  height: 80px;
+  background-color: lightgreen;
+  position: relative;
+}
+.kotak-kuning {
+  position: relative;
+  z-index: 5;
+
+  background: yellow;
+  top: 15px;
+  left: 100px;
+  padding: 40px 20px 40px 120px;
+}
+.block {
+  position: relative;
+  padding: 20px;
+}
+.kotak-biru {
+  z-index: 4;
+  top: 40px;
+  left: 80px;
+  background: #3b82f6;
+}
+.kotak-hijau {
+  z-index: 2;
+  top: 80px;
+  left: 60px;
+  background: #10b981;
+}
+.transform {
+  transform: scaleX(1.5) scaleY(1.5) translateX(100px) translateY(150px);
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background: yellow;
+}

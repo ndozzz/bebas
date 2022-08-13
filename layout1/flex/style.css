@@ -1,0 +1,30 @@
+.flex {
+  display: flex;
+  background-color: DodgerBlue;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex > div {
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.kotak {
+  border: 2px solid;
+}
+.merah {
+  border-color: red;
+}
+.kuning {
+  border-color: yellow;
+}
+.biru {
+  border-color: blue;
+}
+.hijau {
+  border-color: green;
+}

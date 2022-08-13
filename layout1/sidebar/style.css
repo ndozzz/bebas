@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: "Roboto", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  /* ngilangin garis bawah */
+}
+.sidebar {
+  position: fixed;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #042331;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  background: #063146;
+  user-select: none;
+  /* cari fungsinya */
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+.sidebar ul li:hover a {
+  /* transformy: 50px; */
+  /* transform gagal, pelajari lagi kenapa */
+  padding-left: 50px;
+  /* transition: 0.4s; */
+}
+.sidebar ul a i {
+  margin-right: 10px;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  /* absolute untuk hilang dibalik sidebar, tanya kenapa */
+  cursor: pointer;
+  background: #042331;
+  border-radius: 4px;
+}
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  z-index: 1111;
+  left: -240px;
+  top: 12px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 300px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 240px;
+}
+#check:checked ~ section {
+  margin-left: 300px;
+}
+
+section {
+  background: linear-gradient(65deg, #fbda61, purple);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  /* penting, tanpa height background ga muncul, tanya kenapa */
+  transition: all 0.5s ease;
+}

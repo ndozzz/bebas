@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.kotak {
+  width: 80%;
+  height: 80px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid;
+}
+.merah {
+  border-color: red;
+}
+.kuning {
+  border-color: yellow;
+}
+.biru {
+  border-color: blue;
+}
+.hijau {
+  border-color: green;
+}

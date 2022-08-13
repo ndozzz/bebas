@@ -1,0 +1,7 @@
+.transform {
+  transform: scaleX(1.5) scaleY(1.5) translateX(100px) translateY(150px);
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background: yellow;
+}
