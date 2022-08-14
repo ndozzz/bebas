@@ -141,29 +141,27 @@ nav ul .search-icon .icon span {
 }
 label #btn,
 label #cancel {
-  position: absolute;
   /* absolute untuk hilang dibalik sidebar, tanya kenapa */
   cursor: pointer;
   background: #042331;
   border-radius: 4px;
-  margin-top: 60px;
 }
 label #btn {
+  position: absolute;
   left: 40px;
   top: 25px;
   font-size: 35px;
   color: white;
   padding: 6px 12px;
   transition: all 0.5s ease;
+  margin-top: 60px;
 }
 label #cancel {
-  z-index: 1111;
-  left: -240px;
-  top: 12px;
-  font-size: 30px;
   color: #0a5275;
-  padding: 4px 9px;
+  line-height: 30px;
+  padding: 8px 8px;
   transition: all 0.5s ease;
+  margin: auto 0 auto 75px;
 }
 #check:checked ~ .sidebar {
   left: 0;
@@ -172,9 +170,6 @@ label #cancel {
   left: 300px;
   opacity: 0;
   pointer-events: none;
-}
-#check:checked ~ label #cancel {
-  left: 240px;
 }
 #check:checked ~ section {
   margin-left: 300px;
